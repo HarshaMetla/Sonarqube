@@ -9,5 +9,9 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.1.0
       with:
+        projectBaseDir: "/path/to/my-custom-project"
+        projectKey: "my-custom-project"
+        projectName: "my-custom-project-name"
+        projectVersion: "v0.0.1"
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
